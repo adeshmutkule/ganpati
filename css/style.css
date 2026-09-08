@@ -2795,28 +2795,6 @@ img {
   .daily-panchang-grid { grid-template-columns: 1fr; }
 }
 
-.whatsapp-float {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  width: 54px;
-  height: 54px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #25D366;
-  color: #fff;
-  font-size: 1.65rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.22);
-  z-index: 1000;
-}
-
-.whatsapp-float:hover,
-.whatsapp-float:focus-visible {
-  color: #fff;
-  transform: translateY(-4px);
-}
-
 .event-status {
   display: inline-block;
   margin-top: 8px;
@@ -2945,6 +2923,3 @@ body.dark-theme .form-control-ganpati::placeholder {
   color: #bda991;
 }
 
-@media (max-width: 575px) {
-  .whatsapp-float { right: 15px; bottom: 15px; }
-}

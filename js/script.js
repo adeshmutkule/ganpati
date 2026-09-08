@@ -49,15 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateProgress();
   window.addEventListener('scroll', updateProgress, { passive: true });
 
-  const whatsappLink = document.createElement('a');
-  whatsappLink.className = 'whatsapp-float';
-  whatsappLink.href = 'https://wa.me/919322881845?text=Namaskar%21%20Mala%20Ganpati%20Festival%20madhye%20participate%20karayche%20aahe.%20Krupaya%20mahiti%20dya.';
-  whatsappLink.target = '_blank';
-  whatsappLink.rel = 'noopener noreferrer';
-  whatsappLink.setAttribute('aria-label', 'Contact us on WhatsApp');
-  whatsappLink.innerHTML = '<i class="bi bi-whatsapp" aria-hidden="true"></i>';
-  body.appendChild(whatsappLink);
-
   /* ===== NAVBAR SCROLL EFFECT ===== */
   const navbar = document.getElementById('mainNavbar');
   if (navbar) {
