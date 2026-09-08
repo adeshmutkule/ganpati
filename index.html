@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganpati Festival | गणपती बाप्पा मोरया - Celebrate Lord Ganesha</title>
+  <meta name="description" content="Celebrate Ganesh Chaturthi with devotion and joy. Join us for Ganpati Sthapana, Aarti, Cultural Events and Visarjan. गणपती बाप्पा मोरया!">
+  <meta name="keywords" content="Ganpati festival, Ganesh Chaturthi, Ganpati events, aarti, visarjan, Ahilyanagar">
+  <meta property="og:title" content="Ganpati Festival | गणपती बाप्पा मोरया">
+  <meta property="og:description" content="Celebrate Ganesh Chaturthi with aarti, events, darshan and devotion.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+  <div class="site-loader" id="siteLoader" aria-label="Loading Ganpati Festival">
+    <img src="https://t4.ftcdn.net/jpg/20/86/01/59/360_F_2086015907_YGVrKv3AbGvSLdhtDR2HTMBwC1ifs7Zo.jpg" alt="Ganpati logo">
+    <span>गणपती बाप्पा मोरया</span>
+    <i class="bi bi-stars"></i>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg ganpati-navbar fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-ganpati" href="index.html">
+        <span class="brand-icon"><img class="brand-logo" src="https://t4.ftcdn.net/jpg/20/86/01/59/360_F_2086015907_YGVrKv3AbGvSLdhtDR2HTMBwC1ifs7Zo.jpg" alt="Ganpati festival logo"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section">
+    <div class="petals-container"></div>
+    <div class="glow-orb" style="width:400px;height:400px;top:30%;left:50%;transform:translateX(-50%);"></div>
+    <div class="diya-float" style="top:20%;left:10%;"><i class="bi bi-fire"></i></div>
+    <div class="diya-float" style="top:25%;right:12%;animation-delay:1s;"><i class="bi bi-fire"></i></div>
+    <div class="diya-float" style="bottom:15%;left:15%;animation-delay:0.5s;"><i class="bi bi-fire"></i></div>
+    <div class="diya-float" style="bottom:18%;right:15%;animation-delay:1.5s;"><i class="bi bi-fire"></i></div>
+
+    <div class="hero-content">
+      <h1 class="hero-heading">
+        <span class="glow-word">गणपती</span>
+        <span class="glow-word">बाप्पा</span>
+        <span class="glow-word">मोरया!</span>
+      </h1>
+      <p class="hero-subtitle">Welcome to the Celebration of Lord Ganesha</p>
+      <div class="hero-buttons">
+        <a href="#highlights" class="btn btn-ganpati-primary">
+          <i class="bi bi-stars me-2"></i>Explore Celebration
+        </a>
+        <a href="gallery.html" class="btn btn-ganpati-outline">
+          <i class="bi bi-images me-2"></i>View Gallery
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-down">
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== COUNTDOWN TIMER ===== -->
+  <section class="countdown-section" id="countdown">
+    <div class="container">
+      <h2 class="countdown-title reveal">Ganesh Chaturthi 2026 Countdown</h2>
+      <p class="countdown-subtitle reveal reveal-delay-1">The auspicious festival begins soon — join the celebration!</p>
+      <div class="countdown-timer reveal reveal-delay-2">
+        <div class="countdown-box">
+          <div class="countdown-number" id="cd-days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cd-hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cd-minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cd-seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAILY PANCHANG ===== -->
+  <section class="daily-panchang-section section-padding-sm" id="dailyPanchang">
+    <div class="container">
+      <div class="daily-panchang-card reveal-zoom">
+        <div class="daily-panchang-heading">
+          <span class="daily-panchang-icon"><i class="bi bi-sunrise"></i></span>
+          <div>
+            <p class="daily-eyebrow">आजचा पंचांग</p>
+            <h2>आजचा शुभ दिवस</h2>
+          </div>
+        </div>
+        <div class="daily-panchang-grid">
+          <div class="daily-panchang-item"><span>दिनांक</span><strong id="panchangDate">--</strong></div>
+          <div class="daily-panchang-item"><span>वार</span><strong id="panchangDay">--</strong></div>
+          <div class="daily-panchang-item"><span>तिथी</span><strong id="panchangTithi">--</strong></div>
+        </div>
+        <div class="daily-quote"><i class="bi bi-quote"></i><span id="dailyQuote">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।</span></div>
+        <p class="panchang-note"><i class="bi bi-info-circle me-1"></i>तिथीची अचूक माहिती स्थानिक पंचांगानुसार तपासा.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WELCOME / INTRODUCTION ===== -->
+  <section class="section-padding welcome-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-left">
+          <div class="welcome-image-wrap">
+            <img src="https://images.pexels.com/photos/36926748/pexels-photo-36926748.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ganpati Bappa adorned with flowers" class="img-fluid">
+            <div class="welcome-badge">जय गणेश</div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <div class="welcome-text">
+            <div class="decorative-divider" style="justify-content:flex-start;">
+              <i class="bi bi-flower2"></i>
+            </div>
+            <h2>Welcome to the Divine Celebration</h2>
+            <p class="devanagari-quote">"वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ"</p>
+            <p>Ganesh Chaturthi, the most beloved festival of India, celebrates the birth of Lord Ganesha — the elephant-headed deity of wisdom, prosperity, and good fortune. For ten magnificent days, devotees across the world come together in devotion, joy, and cultural splendor.</p>
+            <p>From the grand Sthapana ceremony to the emotional Visarjan, every moment is filled with prayers, aartis, music, and the sweet aroma of modaks. Join us in celebrating the beloved Vighnaharta — the remover of obstacles.</p>
+            <div class="welcome-features">
+              <div class="welcome-feature-item"><i class="bi bi-calendar-heart"></i> 10 Days of Celebration</div>
+              <div class="welcome-feature-item"><i class="bi bi-people"></i> Thousands of Devotees</div>
+              <div class="welcome-feature-item"><i class="bi bi-music-note"></i> Daily Aarti & Bhajans</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FESTIVAL HIGHLIGHTS CARDS ===== -->
+  <section class="section-padding highlights-section" id="highlights">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title">Festival Highlights</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Experience the beauty and devotion of each sacred ceremony during the 10-day Ganpati Utsav</p>
+      </div>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <img src="https://images.pexels.com/photos/33642644/pexels-photo-33642644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ganpati Sthapana">
+            </div>
+            <div class="highlight-card-icon"><i class="bi bi-house-heart"></i></div>
+            <div class="highlight-card-body">
+              <h4>Ganpati Sthapana</h4>
+              <p>The sacred installation of Lord Ganesha's idol, welcoming Bappa home with mantras, flowers, and devotion.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <img src="https://images.pexels.com/photos/14799094/pexels-photo-14799094.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aarti Ceremony">
+            </div>
+            <div class="highlight-card-icon"><i class="bi bi-fire"></i></div>
+            <div class="highlight-card-body">
+              <h4>Aarti</h4>
+              <p>Soul-stirring morning and evening aartis with diyas, mantras, and bhajans filling the air with devotion.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <img src="https://images.pexels.com/photos/28987833/pexels-photo-28987833.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cultural Events">
+            </div>
+            <div class="highlight-card-icon"><i class="bi bi-music-note-beamed"></i></div>
+            <div class="highlight-card-body">
+              <h4>Cultural Events</h4>
+              <p>Vibrant cultural programs featuring classical dances, bhajans, and performances celebrating our rich heritage.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-4">
+          <div class="highlight-card">
+            <div class="highlight-card-img">
+              <img src="https://images.pexels.com/photos/32216011/pexels-photo-32216011.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ganpati Visarjan">
+            </div>
+            <div class="highlight-card-icon"><i class="bi bi-water"></i></div>
+            <div class="highlight-card-body">
+              <h4>Visarjan</h4>
+              <p>The emotional farewell ceremony, immersing Bappa in water with the promise — "Pudhchya varshi lavkar ya!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED GANPATI IMAGE SECTION ===== -->
+  <section class="section-padding featured-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-zoom">
+          <div class="featured-img-wrap">
+            <img src="https://images.pexels.com/photos/35409470/pexels-photo-35409470.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Illuminated Ganesh idol" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <div class="featured-text">
+            <div class="decorative-divider" style="justify-content:flex-start;">
+              <i class="bi bi-stars"></i>
+            </div>
+            <h2>The Glory of Bappa</h2>
+            <p>Lord Ganesha, the son of Lord Shiva and Goddess Parvati, is the most worshipped deity in Hinduism. With his elephant head and large ears, he symbolizes wisdom, listening, and understanding.</p>
+            <ul class="featured-list">
+              <li><i class="bi bi-check-circle"></i> Remover of all obstacles and difficulties</li>
+              <li><i class="bi bi-check-circle"></i> God of wisdom, intellect, and new beginnings</li>
+              <li><i class="bi bi-check-circle"></i> Patron of arts and sciences</li>
+              <li><i class="bi bi-check-circle"></i> Bringer of prosperity and good fortune</li>
+            </ul>
+            <a href="about.html" class="btn btn-ganpati-gold mt-3">
+              <i class="bi bi-arrow-right me-2"></i>Learn More About Bappa
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO SECTION ===== -->
+  <section class="section-padding video-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title">Festival in Motion</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Witness the grandeur of Ganesh Chaturthi through our festival video</p>
+      </div>
+      <div class="row justify-content-center reveal-zoom">
+        <div class="col-lg-10">
+          <div class="video-wrapper" style="height:450px;">
+            <img src="https://images.pexels.com/photos/28770070/pexels-photo-28770070.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Ganpati Festival Video">
+            <div class="video-overlay">
+              <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+              <h4>Ganpati Festival Celebration</h4>
+              <p>Experience the divine journey of devotion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY WE CELEBRATE ===== -->
+  <section class="section-padding why-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title">Why We Celebrate Ganesh Chaturthi</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">The significance behind the most cherished festival of devotion and unity</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+          <div class="why-card">
+            <div class="why-card-icon"><i class="bi bi-shield-check"></i></div>
+            <h5>Remover of Obstacles</h5>
+            <p>Ganesha is Vighnaharta — the one who removes hurdles and paves the way for success and prosperity.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+          <div class="why-card">
+            <div class="why-card-icon"><i class="bi bi-lightbulb"></i></div>
+            <h5>Symbol of Wisdom</h5>
+            <p>The elephant head represents supreme intelligence, memory, and the power of discernment.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+          <div class="why-card">
+            <div class="why-card-icon"><i class="bi bi-people"></i></div>
+            <h5>Unity & Togetherness</h5>
+            <p>The festival brings communities together, transcending barriers and spreading joy and harmony.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal reveal-delay-4">
+          <div class="why-card">
+            <div class="why-card-icon"><i class="bi bi-arrow-repeat"></i></div>
+            <h5>New Beginnings</h5>
+            <p>Ganesh Chaturthi marks auspicious new starts — invoking Bappa's blessings for fresh endeavors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATISTICS ===== -->
+  <section class="section-padding stats-section">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="section-title text-gradient-gold">Celebration by Numbers</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-lg-3 reveal reveal-delay-1">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="bi bi-calendar2-heart"></i></div>
+            <div class="stat-number" data-target="150">0</div>
+            <div class="stat-label">Years Celebrated</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal reveal-delay-2">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="bi bi-people"></i></div>
+            <div class="stat-number" data-target="50000" data-suffix="+">0</div>
+            <div class="stat-label">Devotees</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal reveal-delay-3">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="bi bi-stars"></i></div>
+            <div class="stat-number" data-target="120">0</div>
+            <div class="stat-label">Events</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal reveal-delay-4">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="bi bi-fire"></i></div>
+            <div class="stat-number" data-target="365">0</div>
+            <div class="stat-label">Aartis Per Year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="reveal-zoom">
+        <h2>Join the Grand Celebration</h2>
+        <p>Be part of the most divine and joyous festival. Participate in aartis, cultural events, and experience the blessings of Lord Ganesha.</p>
+        <a href="contact.html" class="btn btn-ganpati-gold btn-lg">
+          <i class="bi bi-heart-fill me-2"></i>Participate Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="ganpati-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 footer-widget">
+          <div class="footer-brand">
+            <div class="brand-icon"><img class="brand-logo" src="https://t4.ftcdn.net/jpg/20/86/01/59/360_F_2086015907_YGVrKv3AbGvSLdhtDR2HTMBwC1ifs7Zo.jpg" alt="Ganpati festival logo"></div>
+          </div>
+          <p>Celebrating the divine spirit of Lord Ganesha. Join us in the grand festival of devotion, culture, and unity.</p>
+        </div>
+        <div class="col-sm-6 col-lg-2 footer-widget">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Events</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 footer-widget">
+          <h5>Festival Events</h5>
+          <ul>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Ganpati Sthapana</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Morning Aarti</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Bhajan Sandhya</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Cultural Program</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Visarjan</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 footer-widget">
+          <h5>Contact Us</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>Old Maliwada Rd, behind Old Bus stand, Maliwada, Ahilyanagar, Maharashtra 414001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>+91 70661 79197</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope"></i>
+            <span>adeshmutkule452@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock"></i>
+            <span>6:00 AM - 10:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ganpati Festival. Designed &amp; developed by <strong>Aadi Mutkule</strong>. <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js?v=8"></script>
+</body>
+</html>

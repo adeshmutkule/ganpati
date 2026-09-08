@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery & Videos | Ganpati Moments</title>
+  <meta name="description" content="Explore stunning photos and videos of Ganesh Chaturthi — idols, aarti, decorations, and visarjan moments.">
+  <meta name="keywords" content="Ganpati gallery, Ganesh Chaturthi photos, Ganpati videos, aarti photos, visarjan photos">
+  <meta property="og:title" content="Ganpati Moments | Gallery & Videos">
+  <meta property="og:description" content="Explore devotional Ganpati photos, aarti moments and festival videos.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+  <div class="site-loader" id="siteLoader" aria-label="Loading Ganpati Festival"><img src="https://t4.ftcdn.net/jpg/20/86/01/59/360_F_2086015907_YGVrKv3AbGvSLdhtDR2HTMBwC1ifs7Zo.jpg" alt="Ganpati logo"><span>गणपती बाप्पा मोरया</span><i class="bi bi-stars"></i></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg ganpati-navbar fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-ganpati" href="index.html">
+        <span class="brand-icon"><img class="brand-logo" src="https://t4.ftcdn.net/jpg/20/86/01/59/360_F_2086015907_YGVrKv3AbGvSLdhtDR2HTMBwC1ifs7Zo.jpg" alt="Ganpati festival logo"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="page-header-bg" style="background-image:url('https://images.pexels.com/photos/13416151/pexels-photo-13416151.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+    <div class="petals-container"></div>
+    <div class="page-header-content">
+      <h1>Ganpati Moments</h1>
+      <ul class="breadcrumb-ganpati">
+        <li><a href="index.html">Home</a></li>
+        <li class="separator"><i class="bi bi-chevron-right"></i></li>
+        <li>Gallery</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title">Festival Gallery</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A visual journey through the divine moments of Ganesh Chaturthi celebrations</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filter reveal">
+        <button class="gallery-filter-btn active" data-filter="all">All</button>
+        <button class="gallery-filter-btn" data-filter="sthapana">Sthapana</button>
+        <button class="gallery-filter-btn" data-filter="aarti">Aarti</button>
+        <button class="gallery-filter-btn" data-filter="decoration">Decoration</button>
+        <button class="gallery-filter-btn" data-filter="visarjan">Visarjan</button>
+      </div>
+
+      <!-- Masonry Gallery -->
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" data-category="sthapana">
+          <img src="https://images.pexels.com/photos/33642644/pexels-photo-33642644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ganpati Sthapana">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Ganpati Sthapana</h5>
+              <p>Sacred installation ceremony</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="aarti">
+          <img src="https://images.pexels.com/photos/14799094/pexels-photo-14799094.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aarti Ceremony">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Aarti Ceremony</h5>
+              <p>Devotional fire ritual</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoration">
+          <img src="https://images.pexels.com/photos/30191664/pexels-photo-30191664.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Decoration">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Floral Decoration</h5>
+              <p>Beautiful mandap decor</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="visarjan">
+          <img src="https://images.pexels.com/photos/32216011/pexels-photo-32216011.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Visarjan">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Ganpati Visarjan</h5>
+              <p>Grand farewell procession</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="sthapana">
+          <img src="https://images.pexels.com/photos/2430288/pexels-photo-2430288.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sthapana idol">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Bappa's Idol</h5>
+              <p>Adorned with marigold garlands</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="aarti">
+          <img src="https://images.pexels.com/photos/32849666/pexels-photo-32849666.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Evening Aarti">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Evening Aarti</h5>
+              <p>Aarti with glowing lamps</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoration">
+          <img src="https://images.pexels.com/photos/8818665/pexels-photo-8818665.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rangoli Decoration">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Rangoli & Decor</h5>
+              <p>Floral rangoli patterns</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="visarjan">
+          <img src="https://images.pexels.com/photos/28770068/pexels-photo-28770068.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Visarjan Procession">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Visarjan Procession</h5>
+              <p>Devotees in grand parade</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoration">
+          <img src="https://images.pexels.com/photos/33714524/pexels-photo-33714524.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Idol Decoration">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Ornate Decoration</h5>
+              <p>Intricate floral adornment</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="sthapana">
+          <img src="https://images.pexels.com/photos/28304899/pexels-photo-28304899.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ganpati idol">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Blessed Bappa</h5>
+              <p>Beautifully adorned idol</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="aarti">
+          <img src="https://images.pexels.com/photos/7750217/pexels-photo-7750217.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aarti ritual">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Sacred Flame</h5>
+              <p>Aarti with brass lamp</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="visarjan">
+          <img src="https://images.pexels.com/photos/13652024/pexels-photo-13652024.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Night Visarjan">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Night Immersion</h5>
+              <p>Illuminated visarjan ceremony</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoration">
+          <img src="https://images.pexels.com/photos/34431714/pexels-photo-34431714.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Diyas Decoration">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Glowing Diyas</h5>
+              <p>Festival of lights decor</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="sthapana">
+          <img src="https://images.pexels.com/photos/18523210/pexels-photo-18523210.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ganpati idol">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Vibrant Bappa</h5>
+              <p>Decorated with flowers</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="visarjan">
+          <img src="https://images.pexels.com/photos/32216150/pexels-photo-32216150.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Visarjan crowd">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i class="bi bi-zoom-in"></i></div>
+            <div class="gallery-overlay-content">
+              <h5>Festival Crowd</h5>
+              <p>Devotees in celebration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO SECTION ===== -->
+  <section class="section-padding highlights-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title">Festival Videos</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Relive the magical moments of Ganesh Chaturthi through our video collection</p>
+      </div>
+
+      <!-- Large Video -->
+      <div class="row justify-content-center mb-4 reveal-zoom">
+        <div class="col-lg-10">
+          <div class="video-wrapper" style="height:450px;" data-youtube-id="GJ2Vfa-wWRY">
+            <img src="https://images.pexels.com/photos/28770070/pexels-photo-28770070.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Ganpati Festival Video">
+            <div class="video-overlay">
+              <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+              <h4>Ganpati Festival Grand Celebration</h4>
+              <p>Experience the full journey of devotion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Smaller Video Cards -->
+      <div class="row g-4">
+        <div class="col-md-4 reveal reveal-delay-1">
+          <div class="video-card" data-youtube-id="WlBDA4wcywU">
+            <div class="video-card-thumb">
+              <img src="https://images.pexels.com/photos/14799094/pexels-photo-14799094.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aarti Video">
+              <div class="video-card-play"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-card-body">
+              <h5>Ganesh Aarti Ceremony</h5>
+              <p>Soulful evening aarti with diyas</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-2">
+          <div class="video-card" data-youtube-id="QH-X9FNzDSg">
+            <div class="video-card-thumb">
+              <img src="https://images.pexels.com/photos/28987833/pexels-photo-28987833.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cultural Video">
+              <div class="video-card-play"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-card-body">
+              <h5>Cultural Program Highlights</h5>
+              <p>Classical dance and music performances</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal reveal-delay-3">
+          <div class="video-card" data-youtube-id="WlBDA4wcywU">
+            <div class="video-card-thumb">
+              <img src="https://images.pexels.com/photos/33853900/pexels-photo-33853900.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Visarjan Video">
+              <div class="video-card-play"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-card-body">
+              <h5>Grand Visarjan Procession</h5>
+              <p>The emotional farewell to Bappa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="reveal-zoom">
+        <h2>Share Your Ganpati Moments</h2>
+        <p>Have beautiful photos or videos from the celebration? Share them with our community and spread the joy of Bappa.</p>
+        <a href="contact.html" class="btn btn-ganpati-gold btn-lg">
+          <i class="bi bi-camera me-2"></i>Share Your Photos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="ganpati-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 footer-widget">
+          <div class="footer-brand">
+            <div class="brand-icon"><img class="brand-logo" src="https://t4.ftcdn.net/jpg/20/86/01/59/360_F_2086015907_YGVrKv3AbGvSLdhtDR2HTMBwC1ifs7Zo.jpg" alt="Ganpati festival logo"></div>
+          </div>
+          <p>Celebrating the divine spirit of Lord Ganesha. Join us in the grand festival of devotion, culture, and unity.</p>
+        </div>
+        <div class="col-sm-6 col-lg-2 footer-widget">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i>About</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Events</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 footer-widget">
+          <h5>Festival Events</h5>
+          <ul>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Ganpati Sthapana</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Morning Aarti</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Bhajan Sandhya</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Cultural Program</a></li>
+            <li><a href="events.html"><i class="bi bi-chevron-right"></i>Visarjan</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 footer-widget">
+          <h5>Contact Us</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>Old Maliwada Rd, behind Old Bus stand, Maliwada, Ahilyanagar, Maharashtra 414001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>+91 70661 79197</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope"></i>
+            <span>adeshmutkule452@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock"></i>
+            <span>6:00 AM - 10:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ganpati Festival. Designed &amp; developed by <strong>Aadi Mutkule</strong>. <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-prev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="">
+    <button class="lightbox-next" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js?v=8"></script>
+</body>
+</html>
