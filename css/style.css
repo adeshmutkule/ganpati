@@ -2389,6 +2389,12 @@ img {
   border-bottom-right-radius: 4px;
 }
 
+.local-chat-message.typing-message {
+  color: var(--dark-brown-light);
+  background: rgba(212,175,55,0.14);
+  font-style: italic;
+}
+
 .local-chatbot-suggestions {
   display: flex;
   flex-wrap: wrap;
@@ -2410,6 +2416,12 @@ img {
 .local-chatbot-suggestions button:hover {
   color: #fff;
   background: var(--deep-red);
+}
+
+.local-chatbot-suggestions button:disabled,
+.local-chatbot-form button:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 
 .local-chatbot-form {
@@ -2474,10 +2486,17 @@ img {
   .local-chatbot {
     right: 14px;
     bottom: 14px;
+    z-index: 1050;
   }
 
   .local-chatbot-panel {
     bottom: 62px;
+    width: min(360px, calc(100vw - 28px));
+    max-height: calc(100dvh - 92px);
+  }
+
+  .local-chatbot-messages {
+    max-height: min(260px, 38dvh);
   }
 
   .local-chatbot-toggle {

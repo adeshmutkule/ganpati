@@ -324,6 +324,23 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===== CONTACT FORM (frontend only) ===== */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    const whatsappSubmit = contactForm.querySelector('[data-whatsapp-submit]');
+    if (whatsappSubmit) {
+      whatsappSubmit.addEventListener('click', () => {
+        if (!contactForm.reportValidity()) return;
+        const formData = new FormData(contactForm);
+        const message = [
+          'Ganpati Festival Registration',
+          `Name: ${formData.get('full_name') || ''}`,
+          `Mobile: ${formData.get('mobile') || ''}`,
+          `Email: ${formData.get('email') || ''}`,
+          `Event: ${formData.get('event') || ''}`,
+          `Message: ${formData.get('message') || ''}`
+        ].join('\n');
+        window.open(`https://wa.me/919322881845?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+      });
+    }
+
     contactForm.addEventListener('submit', async (e) => {
       if (contactForm.action.startsWith('https://formsubmit.co/')) {
         e.preventDefault();
@@ -438,6 +455,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <button type="button" data-chat-question="आरतीची वेळ काय आहे?">आरतीची वेळ</button>
         <button type="button" data-chat-question="कार्यक्रम कोणते आहेत?">कार्यक्रम</button>
         <button type="button" data-chat-question="Contact आणि location द्या">Contact</button>
+        <button type="button" data-chat-question="आज मंदिर किती वाजता उघडे आहे?">मंदिराची वेळ</button>
+        <button type="button" data-chat-question="पर्यावरणपूरक विसर्जन कसे करावे?">Eco विसर्जन</button>
       </div>
       <form class="local-chatbot-form">
         <label class="visually-hidden" for="local-chatbot-input">Ask Bappa Seva</label>
@@ -463,6 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     messageElement.textContent = message;
     chatbotMessages.appendChild(messageElement);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    return messageElement;
   };
 
   const getLocalChatReply = (question) => {
@@ -504,6 +524,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (/मोदक|modak|प्रसाद|naivedya|नैवेद्य/.test(query)) {
       return 'मोदक हा श्री गणेशांचा आवडता नैवेद्य मानला जातो. भक्तीने अर्पण केलेला प्रसाद प्रेमाने सर्वांनी घ्यावा.';
     }
+    if (/फुलांची पूजा|फुले|दुर्वा|durva|पूजेसाठी काय|पूजा साहित्य|साहित्य/.test(query)) {
+      return 'पूजेसाठी दुर्वा, लाल फुले, शेंदूर, नारळ, फळे, मोदक आणि स्वच्छ पाणी ठेवावे. उपलब्धतेनुसार साधेपणाने भक्तीपूर्वक पूजा करा.';
+    }
+    if (/उपवास|व्रत|fast|फास्ट|चतुर्थीला काय/.test(query)) {
+      return 'उपवास आणि व्रत प्रत्येकाच्या श्रद्धा व आरोग्यानुसार असते. आपल्या कुटुंबाच्या परंपरेनुसार आणि गरज असल्यास डॉक्टरांच्या सल्ल्याने पाळा.';
+    }
+    if (/मुलांसाठी|मुले|kids|लहान मुल|स्पर्धा|drawing|चित्रकला/.test(query)) {
+      return 'मुलांसाठी चित्रकला, storytelling आणि Ganpati craft सारख्या activities आहेत. Events page वर कार्यक्रमांची माहिती पाहा.';
+    }
+    if (/स्वयंसेवक|volunteer|सेवा|seva|मंडप|decoration|सजावट/.test(query)) {
+      return 'Seva किंवा decoration साठी Contact page वरील registration form भरा. तुमचे नाव, mobile आणि आवडता event लिहा.';
+    }
     if (/विसर्जन|visarjan|निर्माल्य|पर्यावरण|eco|मूर्ती/.test(query)) {
       return 'विसर्जन श्रद्धेने आणि शक्य तितक्या पर्यावरणपूरक पद्धतीने करा. निर्माल्य वेगळे जमा करा आणि स्थानिक प्रशासनाच्या सूचनांचे पालन करा.';
     }
@@ -517,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return 'मंदिरातील celebration timing रोज सकाळी 6:00 ते रात्री 10:00 आहे. आरतीची वेळ हवी असल्यास “आरती” विचारा.';
     }
     if (/help|मदत|काय विचारू|what can/.test(query)) {
-      return 'तुम्ही आरती, कार्यक्रम, gallery, contact, पत्ता, timing, गणेश चतुर्थी, मोदक किंवा विसर्जनाबद्दल प्रश्न विचारू शकता.';
+      return 'तुम्ही आरती, कार्यक्रम, gallery, contact, पत्ता, timing, पूजा साहित्य, उपवास, मुलांचे कार्यक्रम, seva, मोदक किंवा विसर्जनाबद्दल प्रश्न विचारू शकता.';
     }
     return 'तुमचा प्रश्न समजला. या celebration बद्दल योग्य माहिती देण्यासाठी आरती, कार्यक्रम, gallery, contact, पत्ता, timing, पूजा, मोदक किंवा विसर्जन यापैकी संदर्भ सांगा. मी शक्य तितक्या चांगल्या प्रकारे मदत करतो.';
   };
@@ -535,6 +567,32 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('Gemini chatbot unavailable, using local reply.', error);
     }
     return getLocalChatReply(question);
+  };
+
+  let chatbotBusy = false;
+  const askChatbot = async (question) => {
+    if (chatbotBusy || !question) return;
+    chatbotBusy = true;
+    chatbotInput.disabled = true;
+    chatbot.querySelectorAll('.local-chatbot-suggestions button, .local-chatbot-form button').forEach(button => {
+      button.disabled = true;
+    });
+    addChatMessage(question, 'user');
+    const typingMessage = addChatMessage('Bappa Seva लिहित आहे...', 'bot typing-message');
+    chatbotInput.value = '';
+
+    try {
+      const reply = await getChatReply(question);
+      typingMessage.className = 'local-chat-message bot';
+      typingMessage.textContent = reply;
+    } finally {
+      chatbotBusy = false;
+      chatbotInput.disabled = false;
+      chatbot.querySelectorAll('.local-chatbot-suggestions button, .local-chatbot-form button').forEach(button => {
+        button.disabled = false;
+      });
+      chatbotInput.focus();
+    }
   };
 
   const openChatbot = () => {
@@ -556,24 +614,18 @@ document.addEventListener('DOMContentLoaded', () => {
     else openChatbot();
   });
   chatbotClose.addEventListener('click', closeChatbot);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && chatbotPanel.classList.contains('is-open')) closeChatbot();
+  });
   chatbot.querySelectorAll('[data-chat-question]').forEach(button => {
-    button.addEventListener('click', async () => {
-      const question = button.dataset.chatQuestion;
-      addChatMessage(question, 'user');
-      addChatMessage('थोडं थांबा, मी पाहतो...', 'bot');
-      const reply = await getChatReply(question);
-      chatbotMessages.lastElementChild.textContent = reply;
+    button.addEventListener('click', () => {
+      askChatbot(button.dataset.chatQuestion);
     });
   });
-  chatbotForm.addEventListener('submit', async (event) => {
+  chatbotForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const question = chatbotInput.value.trim();
-    if (!question) return;
-    addChatMessage(question, 'user');
-    addChatMessage('थोडं थांबा, मी पाहतो...', 'bot');
-    chatbotInput.value = '';
-    const reply = await getChatReply(question);
-    chatbotMessages.lastElementChild.textContent = reply;
+    askChatbot(question);
   });
 
   /* ===== CARD HOVER TILT EFFECT (subtle) ===== */
