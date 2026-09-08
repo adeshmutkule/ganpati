@@ -301,11 +301,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ===== YOUTUBE VIDEO PLAYER ===== */
+  let activeVideo = null;
+
+  const stopActiveVideo = () => {
+    if (!activeVideo) return;
+    activeVideo.container.innerHTML = activeVideo.originalMarkup;
+    activeVideo.container.classList.remove('youtube-playing');
+    activeVideo = null;
+  };
+
   document.querySelectorAll('[data-youtube-id]').forEach(trigger => {
     trigger.addEventListener('click', () => {
+      if (activeVideo?.trigger === trigger) {
+        stopActiveVideo();
+        return;
+      }
+
+      stopActiveVideo();
       const videoId = trigger.dataset.youtubeId;
       const player = document.createElement('iframe');
-      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&enablejsapi=1`;
       player.title = 'Ganpati Festival video';
       player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       player.referrerPolicy = 'strict-origin-when-cross-origin';
@@ -315,10 +330,25 @@ document.addEventListener('DOMContentLoaded', () => {
         ? trigger
         : trigger.querySelector('.video-card-thumb');
       if (playerContainer) {
+        activeVideo = {
+          trigger,
+          container: playerContainer,
+          originalMarkup: playerContainer.innerHTML
+        };
         playerContainer.replaceChildren(player);
         playerContainer.classList.add('youtube-playing');
+        const stopButton = document.createElement('button');
+        stopButton.type = 'button';
+        stopButton.className = 'video-stop-control';
+        stopButton.setAttribute('aria-label', 'Stop video');
+        stopButton.innerHTML = '<i class="bi bi-stop-fill" aria-hidden="true"></i>';
+        stopButton.addEventListener('click', (event) => {
+          event.stopPropagation();
+          stopActiveVideo();
+        });
+        playerContainer.appendChild(stopButton);
       }
-    }, { once: true });
+    });
   });
 
   /* ===== CONTACT FORM (frontend only) ===== */
